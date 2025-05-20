@@ -34,11 +34,7 @@ function Footer() {
                   FAQ
                 </Link>
               </li>
-              <li>
-                <Link to="/privacy" className="text-secondary-300 hover:text-white text-sm">
-                  Privacy Policy
-                </Link>
-              </li>
+          
             </ul>
           </div>
 
@@ -71,9 +67,7 @@ function Footer() {
               <Link to="#" className="text-secondary-300 hover:text-white">
                 <FiLinkedin size={20} />
               </Link>
-              <Link to="#" className="text-secondary-300 hover:text-white">
-                <FiGithub size={20} />
-              </Link>
+         
               <Link to="#" className="text-secondary-300 hover:text-white">
                 <FaDiscord size={20} />
               </Link>

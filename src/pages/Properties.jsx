@@ -31,7 +31,6 @@ function Properties() {
       metrics: {
         totalInvestors: 142,
         funded: '89%',
-        minInvestment: '$10',
         monthlyIncome: '$520',
         appreciation: '4.5%'
       },
@@ -56,7 +55,6 @@ function Properties() {
       roi: '6.8%',
       metrics: {
         totalInvestors: 203,
-        funded: '95%',
         minInvestment: '$10',
         monthlyIncome: '$680',
         appreciation: '5.2%'
@@ -66,7 +64,6 @@ function Properties() {
       tokenDetails: {
         totalTokens: 120000,
         availableTokens: 6000,
-        tokenPrice: '$10'
       }
     },
     {
@@ -105,11 +102,9 @@ function Properties() {
     if (filters.propertyType !== 'all' && property.type !== filters.propertyType) return false;
     if (filters.location && !property.location.toLowerCase().includes(filters.location.toLowerCase())) return false;
     if (filters.minROI && parseFloat(property.roi) < parseFloat(filters.minROI)) return false;
-    if (filters.maxROI && parseFloat(property.roi) > parseFloat(filters.maxROI)) return false;
     
     if (filters.priceRange !== 'all') {
       const [min, max] = filters.priceRange.split('-').map(Number);
-      if (max && (property.price.usd < min || property.price.usd > max)) return false;
       if (!max && property.price.usd < min) return false;
     }
 
