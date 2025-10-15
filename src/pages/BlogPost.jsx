@@ -19,6 +19,15 @@ function BlogPost() {
         <li class="mb-2">Access to global investment opportunities</li>
       </ul>
 
+      <h2 class="text-2xl font-semibold mt-8 mb-4">Blockchain's Impact on Property Transactions</h2>
+      <p class="mb-4">Blockchain technology is revolutionizing property transactions in several ways:</p>
+      <ol class="list-decimal pl-6 mb-4">
+        <li class="mb-2">Smart Contracts: Automating and securing transaction processes</li>
+        <li class="mb-2">Property Records: Creating immutable records of ownership</li>
+        <li class="mb-2">Tokenization: Enabling fractional property ownership</li>
+        <li class="mb-2">Transparency: Providing clear transaction histories</li>
+      </ol>
+
       <h2 class="text-2xl font-semibold mt-8 mb-4">The Future Outlook</h2>
       <p class="mb-4">As we look to the future, several trends are emerging:</p>
       <ul class="list-disc pl-6 mb-4">
@@ -63,6 +72,10 @@ function BlogPost() {
               <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
               <div className="flex items-center text-secondary-200 space-x-6">
                 <div className="flex items-center">
+                  <FiUser className="mr-2" />
+                  {post.author}
+                </div>
+                <div className="flex items-center">
                   <FiCalendar className="mr-2" />
                   {post.date}
                 </div>
@@ -87,7 +100,7 @@ function BlogPost() {
             className="lg:col-span-2"
           >
             <div className="bg-white rounded-lg shadow-md p-8">
-              <div
+              <div 
                 className="prose prose-lg max-w-none"
                 dangerouslySetInnerHTML={{ __html: post.content }}
               />
@@ -108,6 +121,9 @@ function BlogPost() {
                   Share this article
                 </h3>
                 <div className="flex space-x-4">
+                  <button className="p-2 rounded-full bg-blue-100 text-blue-600 hover:bg-blue-200">
+                    <FaFacebook size={20} />
+                  </button>
                   <button className="p-2 rounded-full bg-sky-100 text-sky-500 hover:bg-sky-200">
                     <FaTwitter size={20} />
                   </button>

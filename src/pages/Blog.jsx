@@ -39,7 +39,28 @@ function Blog() {
       date: '2024-03-12',
       readTime: '7 min read'
     },
-
+    {
+      id: 3,
+      title: 'Smart Contracts in Real Estate Transactions',
+      slug: 'smart-contracts-real-estate',
+      excerpt: 'How smart contracts are streamlining property transactions and reducing costs.',
+      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80',
+      category: 'technology',
+      author: 'David Rodriguez',
+      date: '2024-03-10',
+      readTime: '6 min read'
+    },
+    {
+      id: 4,
+      title: '2024 Real Estate Market Analysis: Crypto Impact',
+      slug: '2024-market-analysis-crypto',
+      excerpt: 'Analysis of how cryptocurrency adoption is affecting real estate market dynamics.',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+      category: 'market',
+      author: 'Emma Wilson',
+      date: '2024-03-08',
+      readTime: '8 min read'
+    },
     {
       id: 5,
       title: 'Property Investment Strategies with Cryptocurrency',
@@ -124,8 +145,10 @@ function Blog() {
           {filteredPosts.map((post, index) => (
             <motion.article
               key={post.id}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
               className="bg-white rounded-lg shadow-md overflow-hidden"
             >
               <Link to={`/blog/${post.slug}`}>
@@ -148,6 +171,7 @@ function Blog() {
                   </p>
                   <div className="flex items-center text-sm text-secondary-500">
                     <FiUser className="mr-2" />
+                    <span className="mr-4">{post.author}</span>
                     <FiClock className="mr-2" />
                     <span>{post.readTime}</span>
                   </div>
