@@ -1,4 +1,4 @@
-# BestCity
+# IT'S A DANGER PROGECT FORKED FROM https://github.com/interexy! DON'T RUN IT ON YOUR MACHINE
 
 ## What is BestCity?
 
